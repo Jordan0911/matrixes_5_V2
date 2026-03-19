@@ -40,7 +40,7 @@ namespace matrixes_5_V2
             {
                 for (int j = 0; i < matrix.GetLength(1); i++)
                 {
-                    sum[i] += matrix[j, i];
+                    sum[i] += matrix[i, j];
                 }
             }
             return sum;
@@ -55,7 +55,7 @@ namespace matrixes_5_V2
                 {
                     for (int j = 0; j < matrix.GetLength(1); j++)
                     {
-                    result[i, j] = total_sum - (row_sums[i] + column_sum[j]);
+                    result[i, j] = total_sum - (row_sums[i] + column_sum[j]) + matrix[i , j];
                     }
                 }
 
